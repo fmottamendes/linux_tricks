@@ -1,5 +1,8 @@
 
 # Linux Tricks
+1. [Disable Ipv6 on CentOS 8](https://fmottamendes.github.io/linux_tricks/#disable-ipv6-on-centos-8)
+2. [LVM Extend](https://fmottamendes.github.io/linux_tricks/#lvm-extend)
+
 ## Disable Ipv6 on CentOS 8
 Create disableipv6.conf file on /etc/sysctl.d directory:
 ```
