@@ -21,7 +21,8 @@ Restart sysctl service:
 ```
 systemctl restart systemd-sysctl
 ```
-##
+#
+
 ## LVM Extend
 ```
 - Create partition 8e type with fdisk
