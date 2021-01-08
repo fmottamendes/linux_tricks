@@ -21,7 +21,6 @@ Restart sysctl service:
 ```
 systemctl restart systemd-sysctl
 ```
-#
 
 ## LVM Extend
 ```
