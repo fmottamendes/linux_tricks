@@ -36,23 +36,23 @@ vgextend vg_name /dev/sdXx
 ```
 lvextend -l +100%FREE /dev/vg_name/volume_name
 ```
-- (*use 100% free space of volume group to logical volume*)
+(*use 100% free space of volume group to logical volume*)
 
 ```
 lvextend -L 542G /dev/vg_name/volume_name
 ```
-- (*define the new size of logical volume*)
+(*define the new size of logical volume*)
 ```
 lvextend -L +1G /dev/vg_name/volume_name
 ```
-- (*add 1Gb to logical volume*)
+(*add 1Gb to logical volume*)
 
 **Increase de file system size:**
 ```
 xfs_growfs /mount/point -D size - xfs_growfs /mount/point
 ```
-- (*for XFS file system*)
+(*for XFS file system*)
 ```
 resize2fs /mount/point
 ```
-- (*for EXT file system*)
+(*for EXT file system*)
