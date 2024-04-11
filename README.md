@@ -23,7 +23,8 @@ systemctl restart systemd-sysctl
 ```
 
 ## LVM Extend
-**Create partition 8e type with fdisk**
+**Create partition 8e type with fdisk.**
+
 **Create a physical volume:**
 ```
 pvcreate /dev/sdXx
@@ -32,27 +33,22 @@ pvcreate /dev/sdXx
 ```
 vgextend vg_name /dev/sdXx
 ```
-**Extend a logical volume:**
+**Extend a logical volume:** (*use 100% free space of volume group to logical volume*)
 ```
 lvextend -l +100%FREE /dev/vg_name/volume_name
 ```
-(*use 100% free space of volume group to logical volume*)
-
+(*define the new size of logical volume to 542Gb*)
 ```
 lvextend -L 542G /dev/vg_name/volume_name
 ```
-(*define the new size of logical volume*)
+(*add 1Gb to logical volume*)
 ```
 lvextend -L +1G /dev/vg_name/volume_name
 ```
-(*add 1Gb to logical volume*)
-
-**Increase de file system size:**
+**Increase de file system size:** (*for XFS file system*)
 ```
 xfs_growfs /mount/point -D size - xfs_growfs /mount/point
 ```
-(*for XFS file system*)
+(*for EXT file system*)
 ```
 resize2fs /mount/point
-```
-(*for EXT file system*)
