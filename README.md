@@ -61,3 +61,4 @@ resize2fs /mount/point
 "The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 5BA31D57EF5975CA"
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5BA31D57EF5975CA
+```
