@@ -2,6 +2,7 @@
 # Linux Tricks
 1. [Disable Ipv6 on CentOS 8](https://fmottamendes.github.io/linux_tricks/#disable-ipv6-on-centos-8)
 2. [LVM Extend](https://fmottamendes.github.io/linux_tricks/#lvm-extend)
+3. [NO_PUBKEY](https://fmottamendes.github.io/linux_tricks/#no_pubkey)
 
 ## Disable Ipv6 on CentOS 8
 **Create disableipv6.conf file on /etc/sysctl.d directory:**
@@ -52,3 +53,11 @@ xfs_growfs /mount/point -D size - xfs_growfs /mount/point
 (*for EXT file system*)
 ```
 resize2fs /mount/point
+```
+
+## NO_PUBKEY
+**Error NO_PUBKEY**
+
+"The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 5BA31D57EF5975CA"
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5BA31D57EF5975CA
