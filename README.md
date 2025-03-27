@@ -3,6 +3,7 @@
 1. [Disable Ipv6 on CentOS 8](https://fmottamendes.github.io/linux_tricks/#disable-ipv6-on-centos-8)
 2. [LVM Extend](https://fmottamendes.github.io/linux_tricks/#lvm-extend)
 3. [apt update NO_PUBKEY](https://fmottamendes.github.io/linux_tricks/#no_pubkey)
+4. [AKS from az CLI](https://fmottamendes.github.io/linux_tricks/#aks-from-az-cli)
 
 ## Disable Ipv6 on CentOS 8
 **Create disableipv6.conf file on /etc/sysctl.d directory:**
@@ -61,4 +62,9 @@ resize2fs /mount/point
 "The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 5BA31D57EF5975CA"
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5BA31D57EF5975CA
+```
+
+## AKS from az CLI
+```
+az aks command invoke --resource-group nome-rg --name nome_aks --command "kubectl get pods -A"
 ```
